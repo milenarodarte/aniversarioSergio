@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;500&display=swap');
+body {
+    background-image: url("./img/novo\ bg.png");
+    
+
+}
+
+:root {
+    --shadowText: 2px 2px 2px rgb(181, 119, 198);
+    --shadowBox:  2px 2px 2px 2px rgb(181, 119, 198);
+}
+#mainPhoto {
+    height: 300px;
+    border-radius: 100%;
+    box-shadow: var(--shadowBox);
+    
+}
+#mainphoto:hover {
+    transform: scale(1.4);
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+h1 {
+    font-family: inter;
+    text-shadow: 2px 2px 2px rgb(181, 119, 198);
+    background-color: white;
+    height: 40px;
+    border-radius: 5px;
+    width: 400px;
+    text-align: center;
+    justify-content: center;
+}
+.buttonVela {
+    height: 50px;
+    color: white;
+    background-color: rgb(254, 86, 77);
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+    font-size: 19px;
+}
