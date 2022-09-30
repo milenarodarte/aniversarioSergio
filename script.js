@@ -1,72 +1,25 @@
-const container = document.querySelector('.container')
+const felizAniversario = document.querySelector('.felizAniversario2')
+const aniversario3 = document.querySelector('.felizAniversario3')
+const aniversario4 = document.querySelector('.felizAniversario4')
 
-let deadline = new Date('oct 01, 2022 00:00').getTime
+const imgSergioChapeu = document.querySelector('.sergioComChapeu')
 
-let mensagem = [{
-    id: 1,
-    msg: 'Feliz aniversário, Sérgio!',
-    class: 'happyBirthday',
-},
-{
-    id: 2,
-    msg: 'Volte aqui em:'
-}]
+const botaoChapeu = document.querySelector('.botaoChapeu')
 
-function criandoPagina() {
-    
+function adicionarEventoClick () {
 
-    const sergioPhotoShell = document.createElement('picture')
-    sergioPhotoShell.setAttribute('id', 'photoSergio')
+botaoChapeu.addEventListener('click', function (e){
+    const el = e.target
+    console.log(el)
 
-    const sergioPhoto = document.createElement('img')
-    sergioPhoto.setAttribute('src', "./img/sergiosemchapeu.png")
-    sergioPhoto.setAttribute('id', 'mainPhoto')
-    sergioPhoto.setAttribute('class', 'semChapeu')
-    sergioPhotoShell.appendChild(sergioPhoto)
+    if (el.classList.contains('botaoChapeu') ){
+        console.log(felizAniversario.classList)
+        felizAniversario.classList.toggle('showChapeu');
+        aniversario3.classList.toggle('showChapeu');
+        aniversario4.classList.toggle('showChapeu');
 
-    const button = document.createElement('button')
-    button.setAttribute('class', 'buttonVela')
-    button.innerText = "sopre a vela"
-    
-    
-    const h1 = document.createElement('h1')
-    criandoTextoH1()
-  
-
-    container.append(sergioPhotoShell, h1, button)   
-}
-criandoPagina()
-
-
-function trocarFoto () {
-    document.addEventListener('click', function(e){
-        const el = e.target
-        if ( el.classList.contains('buttonVela') && sergioPhoto.classList.contains('semChapeu')) {
-            sergioPhoto.setAttribute('src', "./img/sergiodechapeu.png")
-            sergioPhoto.setAttribute('class', 'comChapeu')
-           
-        }
-        else if ( el.classList.contains('buttonVela') && sergioPhoto.classList.contains('comChapeu')) {
-            sergioPhoto.setAttribute('src', "./img/sergiosemchapeu.png")
-            sergioPhoto.setAttribute('class', 'semChapeu')
-            
-        }
-    })
-}
-trocarFoto()
-
-function criandoTextoH1 () {
-
-    if (h1.classList.contains('happyBirthday')){
-        h1.innerText = 'Feliz aniversário, Sérgio!'
+        imgSergioChapeu.classList.toggle('showChapeu')
     }
-    else if (h1.classList.contains('noBirthday')) {
-        h1.innerText = 'Volte aqui em:'
-    }
+})
 }
-
-function criandoCronometro () {
-    // vai ter o cronometro e do cronometro vai dizer qual a classe do h1
-    // vai vincular o cronometro na página 
-    // vai soltar confete quando clicar no assoprar vela
-}
+adicionarEventoClick()

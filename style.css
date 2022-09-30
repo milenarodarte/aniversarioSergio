@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700&family=Mouse+Memoirs&display=swap');
 body {
-    background-image: url("./img/novo\ bg.png");
-    
+    background-image: url("./img/background.png");
+    font-family: 'Mouse Memoirs', sans-serif;
 
 }
 
@@ -9,37 +9,141 @@ body {
     --shadowText: 2px 2px 2px rgb(181, 119, 198);
     --shadowBox:  2px 2px 2px 2px rgb(181, 119, 198);
 }
-#mainPhoto {
-    height: 300px;
-    border-radius: 100%;
-    box-shadow: var(--shadowBox);
+@media(max-width:500px) {
+    .fotoSergioSemChapeu {
+        width: 200px;
+        position: absolute;
+        top: 28.875rem;
+        left: 0rem;
+    }
+    .sergioComChapeu {
+        width: 260px;
+        position: absolute;
+        top: 19.875rem;
+        left: -3rem;
+        display: flex;
+        display: none;
+    }
+   
+    .felizAniversario2{
+        font-family: 'Mouse Memoirs', sans-serif;
+        font-size: 4rem;
+        position: absolute;
+        top: 10.5rem;
+        left: 1.2rem;
+        color: pink;
+        display: none;
+    }
+    .felizAniversario3{
+        font-family: 'Mouse Memoirs', sans-serif;
+        font-size: 4rem;
+        position: absolute;
+        top: 11rem;
+        left: 1.4rem;
+        color: rgb(210, 126, 1);
+        display: none;
+    }
+    .felizAniversario4 {
+     
+        font-family: 'Mouse Memoirs', sans-serif;
+        font-size: 4rem;
+        position: absolute;
+        top: 11.5rem;
+        left: 1.6rem;
+        color: rgb(118, 11, 123);
+        display: none;
+        
+    }
+    .botaoChapeu {
+        position: absolute;
+        top: 24rem;
+        left: 12rem;
+        
+        width: 12rem;
+        border-radius: 100%;
+        height: 12rem;
+        border: none;
+        background-color: rgb(169, 48, 118);
+        font-size: 1.5rem;
+        font-family: 'Mouse Memoirs', sans-serif;
+        color: pink;
+        
+
+    }
+    .botaoChapeu:focus {
+        border: 2px solid rgb(169, 48, 118);
+        background-color: rgb(250, 190, 225);
+        color: rgb(169, 48, 118);
+    }
+    .showChapeu {
+        display: flex;
+    }
+}
+.fotoSergioSemChapeu {
+    width: 200px;
+    position: absolute;
+    top: 28.875rem;
+    left: 0rem;
+}
+.sergioComChapeu {
+    width: 260px;
+    position: absolute;
+    top: 19.875rem;
+    left: -3rem;
+    display: flex;
+    display: none;
+}
+
+.felizAniversario2{
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 4rem;
+    position: absolute;
+    top: 10.5rem;
+    left: 1.2rem;
+    color: pink;
+    display: none;
+}
+.felizAniversario3{
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 4rem;
+    position: absolute;
+    top: 11rem;
+    left: 1.4rem;
+    color: rgb(210, 126, 1);
+    display: none;
+}
+.felizAniversario4 {
+ 
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 4rem;
+    position: absolute;
+    top: 11.5rem;
+    left: 1.6rem;
+    color: rgb(118, 11, 123);
+    display: none;
     
 }
-#mainphoto:hover {
-    transform: scale(1.4);
-}
-.container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-h1 {
-    font-family: inter;
-    text-shadow: 2px 2px 2px rgb(181, 119, 198);
-    background-color: white;
-    height: 40px;
-    border-radius: 5px;
-    width: 400px;
-    text-align: center;
-    justify-content: center;
-}
-.buttonVela {
-    height: 50px;
-    color: white;
-    background-color: rgb(254, 86, 77);
+.botaoChapeu {
+    position: absolute;
+    top: 24rem;
+    left: 12rem;
+    
+    width: 12rem;
+    border-radius: 100%;
+    height: 12rem;
     border: none;
-    border-radius: 5px;
-    width: 150px;
-    font-size: 19px;
+    background-color: rgb(169, 48, 118);
+    font-size: 1.5rem;
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: pink;
+    
+
+}
+.botaoChapeu:focus {
+    border: 2px solid rgb(169, 48, 118);
+    background-color: rgb(250, 190, 225);
+    color: rgb(169, 48, 118);
+}
+.showChapeu {
+    display: flex;
 }
